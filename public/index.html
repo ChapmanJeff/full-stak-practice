@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app='startrek'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller='mainController'>
+    <input type="text" placeholder="First Name"name="" value="" ng-model="firstName">
+    <input type="text" placeholder="Last Name" name="" value="" ng-model="lastName">
+    <input type="text" placeholder="Rank" name="" value="" ng-model="rank">
+    <button type="button" name="button" ng-click="postPerson(firstName,lastName, rank)">Add Person</button>
+  <div ng-repeat="person in people">
+    {{person.first_name}}, {{person.last_name}} - {{person.rank}} <button type="button" name="button" ng-click="deletePerson(person)">X</button>
+  </div>
+
+    <script src="node_modules/angular/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
